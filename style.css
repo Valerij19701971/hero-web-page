@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    padding: 50px;
+}
+h1, h3 {
+    color: #993333;
+    transition: all 0.5s;
+    position: relative;
+    left: 0;
+}
+h2 span {
+    color: blue;
+}
+
+h2 > span {
+    color: yellowgreen;
+
+}
+h4 + span {
+
+}
+
+h4 ~ span {
+    
+}
+
+h1:hover {
+    color: #000;
+}
