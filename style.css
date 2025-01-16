@@ -1,33 +1,113 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+
+    box-sizing: border-box;
 }
-body{
-    padding: 50px;
+body {
+    overflow-x: hidden;
 }
-h1, h3 {
+
+ h3 {
     color: #993333;
-    transition: all 0.5s;
-    position: relative;
-    left: 0;
 }
-h2 span {
-    color: blue;
-}
-
-h2 > span {
-    color: yellowgreen;
-
-}
-/* h4 + span {
-
-} */
-
-/* h4 ~ span {
     
-} */
 
+h2 span {
+    color: #5cb931;
+
+}
+h2 > span {
+    color: skyblue;
+}
+h4 + span {
+    color: darkorange;
+}
+h4 + span span{
+    color: rgb(3, 14, 175);
+}
+h5 ~ span{
+    color: #f5527a;
+}
+[data-bla="kuku"] {
+    color: #5cb931;
+}
+
+h1 {
+    color: #5cb931;
+     transition: all 3s;
+    position: relative;
+    left: 0; 
+}
 h1:hover {
-    color: #000;
+    color: #b9314e;
+    left: 200px;
+   
+    /* font-size: 80px; */
+}
+li:first-child {
+    color: #5cb931;
+}
+li:last-child {
+    color: #b95131;
+}
+li:nth-child(4) {
+    color: #677bf0;
+}
+li:nth-child(3n) {
+    color: #ec0606;
+}
+input {
+    display: block;
+}
+
+.block {
+    position: absolute;
+    top: 0;
+    right: -280px;
+    height: 100vh;
+    background-color: #b95131;
+    width: 300px;
+    transition: all 2s ease;
+}
+.check-block:checked + div {
+    right: 0;
+}
+.check-block:checked + label + div {
+    right: 0;
+}
+.check-block {
+    display: none;
+}
+label {
+    cursor: pointer;
+    color: #183af8;
+    width: 34px;
+    height: 20px;
+    display: block;
+    background-color: burlywood;
+    position: relative;
+}
+label::after {
+    content: "close" ;
+    display: block;
+    position: absolute;
+    border: 1px solid black;
+}
+label::before {
+    content: "open" ;
+    display: block;
+    position: absolute;
+    border: 1px solid black;
+}
+.check-block + label::after {
+    display: none;
+}
+.check-block:checked + label:after {
+    display: block;
+}
+
+.check-block + label::before {
+    display: block;
+}
+.check-block:checked + label::before {
+    display: none;
 }
